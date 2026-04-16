@@ -1,0 +1,21 @@
+Ticker,Company_Name,Sector,Primary_Business,Passes_screen,Reason
+SCOM,Telcom,Telecom,Mobile telecomminications,True,Passes business screen
+EQTY,Equity Group Holidings,Banking,Conventional banking,False,Excluded: Banking is a prohibited sector
+KCB,KCB Group,Banking,Conventional banking,False,Excluded: Banking is a prohibited sector
+COOP,Co-operative Bank,Banking,Conventional banking,False,Excluded: Banking is a prohibited sector
+ABSA,Absa Bank Kenya,Banking,Conventional banking,False,Excluded: Banking is a prohibited sector
+SCBK,Standard Chartered,Banking,Conventional banking,False,Excluded: Banking is a prohibited sector
+EABL,East African Breweries,Alcohol,Brewing and spirits,False,Excluded: Alcohol is a prohibited sector
+BAT,British American Tobacco,Tobacco,Cigarettes ,False,Excluded: Tobacco is a prohibited sector
+BAMB,Bamburi Cement,Manufacturing,Cement Production,True,Passes business screen
+KEGN,KenGen,Energy ,Electricity generation,True,Passes business screen
+KPLC,Kenya Power,Utilities ,Electricity distribution,True,Passes business screen
+TOTL,TotalEnergies Marketing,Energy ,Fuel retail,True,Passes business screen
+JUB,Jubilee Holidings,Insurance,Conventional insurance,False,Excluded: Insurance is a prohibited sector
+BRIT,Britam Holidings,Insurance,Conventional insurance,False,Excluded: Insurance is a prohibited sector
+NMPG,Natonal Media group,Media,News and media,True,Passes business screen
+SASN,Sasini,Agriculture,Tea and coffee,True,Passes business screen
+CARB,Carbacid Invesments,Manufacturing,Industrial gas,True,Passes business screen
+CRWN,Crown Paints,Manufacturing,Paint production,True,Passes business screen
+UNGA ,Unga group,Food,Flour milling,True,Passes business screen
+WTK,Williamson Tea,Agriculture,Tea ,True,Passes business screen
