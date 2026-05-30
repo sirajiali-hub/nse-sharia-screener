@@ -20,10 +20,10 @@ A three-layer Sharia compliance screening tool applied to NSE 20 listed companie
 
 ## Key Findings
 
-- **5 of 20 NSE companies pass full Sharia compliance** — Safaricom, Bamburi Cement, Nation Media, Centum Investment, and Kenya Power
-- **All 9 banks auto-excluded** — conventional banking is structurally incompatible with Islamic finance (riba)
-- **Insurance companies fail on interest income** — Jubilee, Britam, and CIC earn more than 5% of revenue from interest on investment portfolios
-- **Kenya Airways excluded on leverage** — debt-to-assets ratio of 82.7%, nearly 3x the AAOIFI limit of 33%
+- **5 of 20 NSE companies pass full Sharia compliance** Safaricom, Bamburi Cement, Nation Media, Centum Investment, and Kenya Power
+- **All 9 banks auto-excluded** conventional banking is structurally incompatible with Islamic finance (riba)
+- **Insurance companies fail on interest income**  Jubilee, Britam, and CIC earn more than 5% of revenue from interest on investment portfolios
+- **Kenya Airways excluded on leverage** debt-to-assets ratio of 82.7%, nearly 3x the AAOIFI limit of 33%
 
 ---
 
