@@ -1,1 +1,0 @@
-Day 1 i wrote REAMDE.md and screened business by exploring nse 20 listed companies. so far 11 business passed the test while 9 were excluded, i did visulazation that shows those comanies who passes those who were exculed. i had some challanges for loading data and i figured it out later and also the functions. looking forwaed for day 2
