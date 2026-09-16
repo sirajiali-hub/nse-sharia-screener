@@ -1,86 +1,57 @@
-# NSE Sharia-Compliant Stock Screener
+# NSE Sharia Stock Screener
 
-[![View Notebook](https://img.shields.io/badge/View%20Notebook-nbviewer-orange)](https://nbviewer.org/github/sirajiali-hub/nse-sharia-screener/blob/main/notebooks/nse_sharia_screener.ipynb)
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Standard](https://img.shields.io/badge/Standard-AAOIFI-green)
+An interactive three-layer Sharia compliance screen applied to the
+NSE 20 (Nairobi Securities Exchange), following AAOIFI (Accounting
+and Auditing Organisation for Islamic Financial Institutions)
+methodology.
 
-A three-layer Sharia compliance screening tool applied to NSE 20 listed companies using **real FY2024/25 annual report data** pulled directly from company filings.
+**Live app:** https://nse-sharia-screener-4qjv3c7sytjetz4jappxw5.streamlit.app/
 
----
+## What it does
 
-## Results
+1. **Layer 1, Business Activity Screen.** Excludes companies in
+   sectors considered impermissible under Islamic finance (banking,
+   alcohol, tobacco, weapons, pork, gambling, pornography).
+2. **Layer 2, Financial Ratio Screen.** For companies that pass
+   Layer 1, checks three balance-sheet ratios against AAOIFI
+   thresholds (Debt/Assets < 33%, Interest Income/Revenue < 5%,
+   Liquid Assets/Total Assets < 33%).
+3. **Layer 3, Compliance Score.** Converts the results into a 0-100
+   score and A-D rating, so companies can be ranked rather than only
+   pass/fail.
 
-![Screening Heatmap](notebooks/sharia_heatmap.png)
+Results are split into two clearly labeled tiers:
+- **Fully Compliant** (Score = 100), clears every threshold outright.
+- **Rating A** (Score 80-99), broadly compliant, narrowly misses one
+  ratio on the strict cutoff.
 
-![Screening Funnel](notebooks/sharia_funnel.png)
+The Streamlit app lets you adjust the three AAOIFI thresholds live,
+to see how sensitive the results are to the cutoffs chosen.
 
-![Compliant Portfolio](notebooks/sharia_portfolio.png)
+## Data
 
----
+Figures are manually extracted from individual NSE-listed companies'
+annual reports (FY2024/25), this is **not** a live data feed.
+Banking-sector companies show no ratio data because they are
+excluded at Layer 1 before ratios would be calculated. This is a
+research/portfolio project, not investment advice, verify figures
+against the latest filings before making any investment decision.
 
-## Key Findings
+## Running locally
 
-- **5 of 20 NSE companies pass full Sharia compliance** Safaricom, Bamburi Cement, Nation Media, Centum Investment, and Kenya Power
-- **All 9 banks auto-excluded** conventional banking is structurally incompatible with Islamic finance (riba)
-- **Insurance companies fail on interest income**  Jubilee, Britam, and CIC earn more than 5% of revenue from interest on investment portfolios
-- **Kenya Airways excluded on leverage** debt-to-assets ratio of 82.7%, nearly 3x the AAOIFI limit of 33%
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
----
+## Project structure
 
-## Screening Methodology
-
-| Layer | Test | Threshold |
-|-------|------|-----------|
-| 1 | Business activity — no prohibited sectors | No banking, alcohol, tobacco, weapons, pork |
-| 2a | Debt / Total Assets | < 33% |
-| 2b | Interest Income / Total Revenue | < 5% |
-| 2c | (Cash + Receivables) / Total Assets | < 33% |
-| 3 | Compliance Score | 0–100 weighted score → A / B / C / D rating |
-
-**Standard:** AAOIFI (Accounting and Auditing Organisation for Islamic Financial Institutions)
-
----
-
-## Data Sources
-
-All financial data extracted from individual NSE company annual reports:
-
-| Company | Ticker | FY |
-|---------|--------|----|
-| Safaricom | SCOM | 2024 |
-| Bamburi Cement | BAMB | 2024 |
-| Kenya Airways | KQ | 2024 |
-| Nation Media Group | NMG | 2024 |
-| Centum Investment | CTUM | Mar-2024 |
-| Jubilee Holdings | JUB | 2025 |
-| Britam Holdings | BRIT | 2024 |
-| CIC Insurance | CIC | 2024 |
-| Kenya Power | KPLC | Jun-2025 |
-| Banks, Alcohol, Tobacco | — | Auto-excluded (Layer 1) |
-
----
-
-## Tech Stack
-
-Python · Pandas · Matplotlib · Jupyter · openpyxl
-
----
-
-## Next Steps
-
-- Expand universe to full NSE listed companies (~60)
-- Integrate live NSE price data for market-cap weighting
-- Backtest compliant basket vs NSE 20 index returns
-- Add quarterly rebalancing model using updated annual report data
-
----
-
-## Disclaimer
-
-This is a data tool, not a religious ruling. Real Sharia compliance requires review by qualified scholars.
-
----
+```
+screener.py   - core screening logic (no UI), reusable/testable
+app.py        - Streamlit interface built on top of screener.py
+requirements.txt
+```
 
 ## Author
 
-**Siraji Ali** | [GitHub](https://github.com/sirajiali-hub)
+Siraji Ali · [GitHub](https://github.com/sirajiali-hub)
