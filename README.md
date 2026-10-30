@@ -22,14 +22,14 @@ Islamic investors avoid companies in banned businesses (such as interest based b
 ## Why it matters
 Muslim investors in Kenya have very few listed options. This gives them a clear, rule based starting list.
 
-## Limits (be honest about these)
+## Limits 
 * Covers the NSE 20 only, not all listed companies.
 * Uses one year of annual report figures, so results can change each year.
 * Scholars differ on some rules. This follows AAOIFI limits only.
 
 ## Files
 * `nse_sharia_screener.ipynb`: the screening steps and charts
-* Live app: [add your Streamlit link]
+
 
 ## How to run
 1. Run `pip install pandas numpy matplotlib`
